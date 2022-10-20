@@ -94,7 +94,18 @@ h02(y)
 
 # default arguments
 x <- 1
-h <- function(x = ls()) {
+h05 <- function(x = ls()) {
     a <- 1
     x
 }
+
+h05()
+h05(ls())
+
+# check for missing argument
+h06 <- function(x = 10) {
+    list(missing(x), x)
+}
+
+h06()
+h06(10)
