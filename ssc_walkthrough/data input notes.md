@@ -11,3 +11,7 @@ To download the dataset, first you'll need to install the sratoolkit from the NI
 Download the Single-nucleus RNA sequencing of control cortical tissue.
 
 - [Link here](https://www.ncbi.nlm.nih.gov/sra/?term=SRR9123032) to the NIH repository. The sequence read run (SRR) number is: [SRR9123032](https://trace.ncbi.nlm.nih.gov/Traces/?view=run_browser&acc=SRR9123032&display=metadata)
+
+**Generating Reads with kb-python**
+
+
