@@ -1,0 +1,35 @@
+,disease,center,latitude,longitude,country
+0,PM,Hospital Universitari Vall d'Hebron,41.4276874,2.1423868,Catalunya
+1,PM,CHRU de Lille - Hôpital Claude Huriez,50.611496,3.036616,France
+2,PM,Azienda Ospedaliero Universitaria Pisana - Ospedale S. Chiara,43.7207257,10.3930024,Provincia di Pisa
+3,PM,Institut de Myologie - Hôpital Pitié-Salpêtrière,48.84018349999999,2.3632207,Île-de-France
+4,PM,CHU de Montpellier - Hôpital Arnaud de Villeneuve,43.6315886,3.8504425,Occitanie
+5,PM,CHU de Marseille - Hôpital de la Timone,43.2904364,5.402048499999999,Provence-Alpes-Côte d'Azur
+6,PM,ERKNet coordinating center D-69120 HEIDELBERG,49.4135138,8.6844798,Baden-Württemberg
+7,PM,"Institute of Genomic Medicine and Rare Disorders, Semmelweis University",47.4826578,19.080072,Hungary
+8,PM,Beaumont Hospital Beaumont Road,53.3903749,-6.2239615,Ireland
+9,PM,"Beaumont Kidney Centre, Beaumont Hospital, Dublin 9",53.3903749,-6.2239615,Ireland
+10,PM,Children's Health Ireland @ Temple Street,53.356787,-6.2620292,Ireland
+11,PM,Fundació Puigvert,41.4127986,2.1724597,Barcelona
+12,PM,"c/o unimedsuisse, Haus der Akademien",46.9470801,7.4365981,Bern
+13,PM,Schweizerische Muskelgesellschaft,47.3756918,8.5242671,Zürich
+14,PM,GOSH NHS Foundatin Trust,51.5218626,-0.1207462,WC1N 3JH
+15,PM,Institut für Medizinische Genetik und angewandte Genomik Tübingen,48.5268924,9.0509889,Tübingen
+16,PM,Tallaght University Hospital,53.2902365,-6.3784299,Ireland
+17,PM,Hospital Universitario La Paz,40.4811633,-3.6873978,Comunidad de Madrid
+18,dcSSc,Hospital Universitari Vall d'Hebron,41.4276874,2.1423868,Catalunya
+19,dcSSc,CHRU de Lille - Hôpital Claude Huriez,50.611496,3.036616,France
+20,dcSSc,Universitätsklinikum Köln,50.9243699,6.9194606,Kreisfreie Stadt Köln
+21,dcSSc,Tallaght University Hospital,53.2902365,-6.3784299,Ireland
+22,dcSSc,IRCCS Istituto G. Gaslini - Ospedale Pediatrico,44.3928372,8.9882412,Città Metropolitana di Genova
+23,dcSSc,Azienda Ospedaliero Universitaria Pisana - Ospedale S. Chiara,43.7207257,10.3930024,Provincia di Pisa
+24,dcSSc,"UMC Utrecht, locatie WKZ",52.0895264,5.1811723,Utrecht
+25,dcSSc,"unimedsuisse, Haus der Akademien",46.9470801,7.4365981,Bern
+26,dcSSc,Hôpital Necker-Enfants Malades,48.8452199,2.3157461,Île-de-France
+27,dcSSc,"Institute of Genomic Medicine and Rare Disorders, Semmelweis University",47.4826578,19.080072,Hungary
+28,dcSSc,CHU de Montpellier - Hôpital Arnaud de Villeneuve,43.6315886,3.8504425,Occitanie
+29,dcSSc,ERKNet coordinating center D-69120 HEIDELBERG,49.4135138,8.6844798,Baden-Württemberg
+30,dcSSc,"Beaumont Kidney Centre, Beaumont Hospital, Dublin 9",53.3903749,-6.2239615,Ireland
+31,dcSSc,Children's Health Ireland @ Temple Street,53.356787,-6.2620292,Ireland
+32,dcSSc,Fundació Puigvert,41.4127986,2.1724597,Barcelona
+33,dcSSc,Hospital Universitario La Paz,40.4811633,-3.6873978,Comunidad de Madrid
