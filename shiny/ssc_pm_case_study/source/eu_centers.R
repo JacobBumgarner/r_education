@@ -49,7 +49,7 @@ title <- fluidRow(box(
         <a target='_blank' href='https://www.orpha.net/consor/cgi-bin/index.php?lng=EN'>orpha.net</a>, 
         and the expert center locations were extracted
         using the Google Maps Python API 
-        <a target='_blank' href='https://github.com/JacobBumgarner/r_education/blob/main/shiny/ssc_pd_clinics_app/location_scraper.ipynb'>(see my code here)</a>
+        <a target='_blank' href='https://github.com/JacobBumgarner/r_education/blob/main/shiny/ssc_pm_case_study/location_scraper.ipynb'>(see my code here)</a>
         .
         "
     ),

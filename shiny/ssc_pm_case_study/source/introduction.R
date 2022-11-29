@@ -17,7 +17,7 @@ title <- fluidRow(box(
     tags$h4(
     HTML(
         "
-    Diffuse Cutaneous Systemic Sclerosis (dcSSc) and Polymyositis (PM) are two
+    Diffuse Cutaneous Systemic Sclerosis and Polymyositis are two
     rare autoimmune diseases.
     <br>
     This case report examines the epidemiology and EU treatment network center
