@@ -4,9 +4,9 @@ library(plotly)
 library(leaflet)
 
 # load ui
-source("app_source/introduction.R")
-source("app_source/epidemiology.R")
-source("app_source/eu_centers.R")
+source("source/introduction.R")
+source("source/epidemiology.R")
+source("source/eu_centers.R")
 
 # UI
 sidebar_width <- 275
@@ -30,8 +30,7 @@ ui <- dashboardPage(
             ),
             menuItem(
                 "EU Expert Networks",
-                tabName = "expert_networks", icon = icon("location-dot"),
-                selected = TRUE
+                tabName = "expert_networks", icon = icon("location-dot")
             )
         )
     ),
