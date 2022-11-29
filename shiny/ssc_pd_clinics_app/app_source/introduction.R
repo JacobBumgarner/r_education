@@ -13,10 +13,15 @@ title <- tags$h2(
 )
 
 text <- tags$h4(
+    HTML(
     "
     Diffuse Cutaneous Systemic Sclerosis (dcSSc) and Polymyositis (PM) are two
-    rare autoimmune diseases. This case report examines the epidemiology and
-    EU treatment center locations for each disease.",
+    rare autoimmune diseases.
+    <br>
+    This case report examines the epidemiology and EU treatment network center
+    locations for each disease.
+    "
+    ),
     align = "center"
 )
 
@@ -29,7 +34,7 @@ dcssc_box <- box(
     solidHeader = TRUE,
     collapsible = FALSE,
     tags$p(
-        tags$h4("Overview"),
+        tags$h4(HTML("<b>Overview</b>")),
         HTML(
             "
             Diffuse cutaneous systemic sclerosis (dcSSc) is a form 
@@ -40,7 +45,7 @@ dcssc_box <- box(
             extracellular matrix protein deposition (e.g., collagen).
             "
         ),
-        tags$h4("Treatment & Prognosis"),
+        tags$h4(HTML("<b>Treatment & Prognosis</b>")),
         HTML(
             "
             There is currently no known treatment for dcSSc, but
@@ -51,7 +56,7 @@ dcssc_box <- box(
             <a target='_blank' href='https://arthritis-research.biomedcentral.com/articles/10.1186/s13075-021-02672-y'>[1]</a>.
             "
         ),
-        tags$h4("Pathophysiology"),
+        tags$h4(HTML("<b>Pathophysiology</b>")),
         HTML(
             "
             dcSSc is characterized by disruption of the microvasculature,
@@ -79,7 +84,7 @@ pm_box <- box(
     solidHeader = TRUE,
     collapsible = FALSE,
     tags$p(
-        tags$h4("Overview"),
+        tags$h4(HTML("<b>Overview</b>")),
         HTML(
             "
             Polymyositis (PM) is a type of rare muscle diseases known 
@@ -90,7 +95,7 @@ pm_box <- box(
             <br>
             "
         ),
-        tags$h4("Treatment & Prognosis"),
+        tags$h4(HTML("<b>Treatment & Prognosis</b>")),
         HTML(
             "There is currently no known treatment for PM, but 
             palliative treatments exist.<br>
@@ -99,7 +104,7 @@ pm_box <- box(
             <a target='_blank' href='https://pubmed.ncbi.nlm.nih.gov/16477398/'>[4]</a>.
             "
         ),
-        tags$h4("Pathophysiology"),
+        tags$h4(HTML("<b>Pathophysiology</b>")),
         HTML(
             "PM is characterized by excessive muscular inflammation 
             caused by infiltrating CD4+ and CD8+ T cells, macrophages, 
