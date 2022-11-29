@@ -6,7 +6,7 @@ library(shinydashboardPlus)
 # Introduction tab
 title <- tags$h2(
     HTML(
-        "Epidemiology and Case Center Report:<br>
+        "Case Report:<br>
         Diffuse Cutaneous Systemic Sclerosis and Polymyositis"
     ),
     align = "center"
