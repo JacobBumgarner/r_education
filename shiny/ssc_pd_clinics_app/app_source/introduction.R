@@ -4,26 +4,29 @@ library(shinydashboardPlus)
 
 
 # Introduction tab
-title <- tags$h2(
+title <- fluidRow(box(
+    title = tags$h2(
+        HTML(
+            "Case Report:<br>
+            Diffuse Cutaneous Systemic Sclerosis and Polymyositis"
+        ),
+        align = "center"
+        ),
+    width = 12,
+    height = "50%",
+    tags$h4(
     HTML(
-        "Case Report:<br>
-        Diffuse Cutaneous Systemic Sclerosis and Polymyositis"
-    ),
-    align = "center"
-)
-
-text <- tags$h4(
-    HTML(
-    "
+        "
     Diffuse Cutaneous Systemic Sclerosis (dcSSc) and Polymyositis (PM) are two
     rare autoimmune diseases.
     <br>
     This case report examines the epidemiology and EU treatment network center
     locations for each disease.
-    "
+        "
     ),
     align = "center"
 )
+))
 
 dcssc_box <- box(
     title = "Diffuse Cutaneous Systemic Sclerosis",
@@ -143,7 +146,6 @@ references <- box(
 introduction_tab <- tabItem(
     tabName = "introduction",
     title,
-    text,
     br(),
     etiology_row,
     br(),
