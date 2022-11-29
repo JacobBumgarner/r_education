@@ -126,12 +126,18 @@ etiology_row <- fluidRow(column(6, dcssc_box), column(6, pm_box))
 
 reference_header <- h3("References:")
 
-references <- tags$ol(
-    tags$li("De Almeida Chaves, S., Porel, T., Mounié, M., Alric, L., Astudillo, L., Huart, A., Lairez, O., Michaud, M., Prévot, G. & Ribes, D. (2021) Sine scleroderma, limited cutaneous, and diffused cutaneous systemic sclerosis survival and predictors of mortality. Arthritis research &amp; therapy. 23, 1-12."),
-    tags$li("Ostojić, P. & Damjanov, N. (2006) Different clinical features in patients with limited and diffuse cutaneous systemic sclerosis. Clinical rheumatology. 25, 453-457."),
-    tags$li("Pattanaik, D., Brown, M., Postlethwaite, B.C. & Postlethwaite, A.E. (2015) Pathogenesis of systemic sclerosis. Frontiers in Immunology. 6, 272."),
-    tags$li("Airio, A., Kautiainen, H. & Hakala, M. (2006) Prognosis and mortality of polymyositis and dermatomyositis patients. Clinical rheumatology. 25, 234-239."),
-    tags$li("Cheeti, A., Brent, L.H. & Panginikkod, S. (2022) Autoimmune myopathies. In StatPearls [Internet], StatPearls Publishing.")
+references <- box(
+    title = "References",
+    icon = icon("book"),
+    status = "black",
+    width = 12,
+    tags$ol(
+        tags$li("De Almeida Chaves, S., Porel, T., Mounié, M., Alric, L., Astudillo, L., Huart, A., Lairez, O., Michaud, M., Prévot, G. & Ribes, D. (2021) Sine scleroderma, limited cutaneous, and diffused cutaneous systemic sclerosis survival and predictors of mortality. Arthritis research &amp; therapy. 23, 1-12."),
+        tags$li("Ostojić, P. & Damjanov, N. (2006) Different clinical features in patients with limited and diffuse cutaneous systemic sclerosis. Clinical rheumatology. 25, 453-457."),
+        tags$li("Pattanaik, D., Brown, M., Postlethwaite, B.C. & Postlethwaite, A.E. (2015) Pathogenesis of systemic sclerosis. Frontiers in Immunology. 6, 272."),
+        tags$li("Airio, A., Kautiainen, H. & Hakala, M. (2006) Prognosis and mortality of polymyositis and dermatomyositis patients. Clinical rheumatology. 25, 234-239."),
+        tags$li("Cheeti, A., Brent, L.H. & Panginikkod, S. (2022) Autoimmune myopathies. In StatPearls [Internet], StatPearls Publishing.")
+    )
 )
 
 introduction_tab <- tabItem(
@@ -141,6 +147,5 @@ introduction_tab <- tabItem(
     br(),
     etiology_row,
     br(),
-    reference_header,
     references
 )
