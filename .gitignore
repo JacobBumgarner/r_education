@@ -2,7 +2,9 @@
 *.code-workspace
 .vscode/
 
+# Personal
 .DS_Store
+__pycache__/
 
 # API
 config/
