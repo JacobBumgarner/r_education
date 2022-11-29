@@ -155,7 +155,7 @@ male_color_picker <- colourInput("men_color", "Select Men Color:", "#2986cc", )
 options_box <- box(
     title = "Graph Options",
     width = 12,
-    # status = "black",
+    status = "black",
     solidHeader = FALSE,
     icon = icon("gear"),
     align = "center",
@@ -187,6 +187,5 @@ epidemiology_tab <- tabItem(
     fluidRow(
         column(3, options_box, offset = 1),
         column(7, references),
-        # align = "center"
     ),
 )

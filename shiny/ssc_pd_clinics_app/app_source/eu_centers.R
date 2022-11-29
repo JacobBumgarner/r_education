@@ -210,7 +210,6 @@ options_box <- box(
 expert_networks_tab <- tabItem(
     tabName = "expert_networks",
     title,
-    text,
     fluidRow(leafletOutput("map", width = "90%"), align = "center"),
     p(),
     fluidRow(column(7, bar_plot_box, offset = 1), column(3, options_box), align = "center"),
