@@ -1,0 +1,66 @@
+Growth [ 1 annotation ]
+Term Identifier Term Name
+HP:0001824 Weight loss
+Cardiovascular [ 8 annotations ]
+Term Identifier Term Name
+HP:0001633 Abnormal mitral valve morphology
+HP:0001635 Congestive heart failure
+HP:0001639 Hypertrophic cardiomyopathy
+HP:0001644 Dilated cardiomyopathy
+HP:0001658 Myocardial infarction
+HP:0002633 Vasculitis
+HP:0005150 Abnormal atrioventricular conduction
+HP:0011675 Arrhythmia
+Respiratory System [ 5 annotations ]
+Term Identifier Term Name
+HP:0002093 Respiratory insufficiency
+HP:0002206 Pulmonary fibrosis
+HP:0002875 Exertional dyspnea
+HP:0006530 Abnormal pulmonary interstitial morphology
+HP:0012735 Cough
+Digestive System [ 4 annotations ]
+Term Identifier Term Name
+HP:0002019 Constipation
+HP:0002020 Gastroesophageal reflux
+HP:0002039 Anorexia
+HP:0002240 Hepatomegaly
+Genitourinary system [ 1 annotation ]
+Term Identifier Term Name
+HP:0000091 Abnormal renal tubule morphology
+Immunology [ 2 annotations ]
+Term Identifier Term Name
+HP:0001701 Pericarditis
+HP:0002960 Autoimmunity
+Blood and blood-forming tissues [ 2 annotations ]
+Term Identifier Term Name
+HP:0002239 Gastrointestinal hemorrhage
+HP:0004936 Venous thrombosis
+Skeletal system [ 2 annotations ]
+Term Identifier Term Name
+HP:0000934 Chondrocalcinosis
+HP:0001369 Arthritis
+Musculature [ 4 annotations ]
+Term Identifier Term Name
+HP:0001252 Hypotonia
+HP:0003457 EMG abnormality
+HP:0003701 Proximal muscle weakness
+HP:0004303 Abnormal muscle fiber morphology
+Nervous System [ 3 annotations ]
+Term Identifier Term Name
+HP:0001288 Gait disturbance
+HP:0001315 Reduced tendon reflexes
+HP:0001618 Dysphonia
+Constitutional Symptom [ 4 annotations ]
+Term Identifier Term Name
+HP:0002027 Abdominal pain
+HP:0002829 Arthralgia
+HP:0003326 Myalgia
+HP:0012378 Fatigue
+Neoplasm [ 1 annotation ]
+Term Identifier Term Name
+HP:0003002 Breast carcinoma
+Metabolism/Laboratory abnormality [ 3 annotations ]
+Term Identifier Term Name
+HP:0001945 Fever
+HP:0003236 Elevated circulating creatine kinase concentra
+HP:0012544 Elevated aldolase level

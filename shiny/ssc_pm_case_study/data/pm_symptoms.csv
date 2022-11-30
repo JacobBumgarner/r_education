@@ -1,0 +1,41 @@
+Identifier,System,Symptom,Frequency
+HP:0001824,Growth,Weight loss,Frequent
+HP:0001633,Cardiovascular,Abnormal mitral valve morphology,Occasional
+HP:0001635,Cardiovascular,Congestive heart failure,Occasional
+HP:0001639,Cardiovascular,Hypertrophic cardiomyopathy,Occasional
+HP:0001644,Cardiovascular,Dilated cardiomyopathy,Occasional
+HP:0001658,Cardiovascular,Myocardial infarction,Occasional
+HP:0002633,Cardiovascular,Vasculitis,Occasional
+HP:0005150,Cardiovascular,Abnormal atrioventricular conduction,Occasional
+HP:0011675,Cardiovascular,Arrhythmia,Occasional
+HP:0002093,Respiratory System,Respiratory insufficiency,Frequent
+HP:0002206,Respiratory System,Pulmonary fibrosis,Occasional
+HP:0002875,Respiratory System,Exertional dyspnea,Frequent
+HP:0006530,Respiratory System,Abnormal pulmonary interstitial morphology,Frequent
+HP:0012735,Respiratory System,Cough,Very frequent
+HP:0002019,Digestive System,Constipation,Frequent
+HP:0002020,Digestive System,Gastroesophageal reflux,Occasional
+HP:0002039,Digestive System,Anorexia,Frequent
+HP:0002240,Digestive System,Hepatomegaly,Occasional
+HP:0000091,Genitourinary system,Abnormal renal tubule morphology,Occasional
+HP:0001701,Immunology,Pericarditis,Occasional
+HP:0002960,Immunology,Autoimmunity,Very frequent
+HP:0002239,Blood and blood-forming tissues,Gastrointestinal hemorrhage,Occasional
+HP:0004936,Blood and blood-forming tissues,Venous thrombosis,Occasional
+HP:0000934,Skeletal system,Chondrocalcinosis,Occasional
+HP:0001369,Skeletal system,Arthritis,Frequent
+HP:0001252,Musculature,Hypotonia,Very frequent
+HP:0003457,Musculature,EMG abnormality,Very frequent
+HP:0003701,Musculature,Proximal muscle weakness,Very frequent
+HP:0004303,Musculature,Abnormal muscle fiber morphology,Very frequent
+HP:0001288,Nervous System,Gait disturbance,Occasional
+HP:0001315,Nervous System,Reduced tendon reflexes,Occasional
+HP:0001618,Nervous System,Dysphonia,Occasional
+HP:0002027,Constitutional Symptom,Abdominal pain,Occasional
+HP:0002829,Constitutional Symptom,Arthralgia,Very frequent
+HP:0003326,Constitutional Symptom,Myalgia,Frequent
+HP:0012378,Constitutional Symptom,Fatigue,Frequent
+HP:0003002,Neoplasm,Breast carcinoma,Occasional
+HP:0001945,Metabolism/Laboratory abnormality,Fever,Frequent
+HP:0003236,Metabolism/Laboratory abnormality,Elevated circulating creatine kinase concentra,Very frequent
+HP:0012544,Metabolism/Laboratory abnormality,Elevated aldolase level,Very frequent

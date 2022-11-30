@@ -1,0 +1,27 @@
+Identifier,System,Symptom,Frequency
+HP:0000217,Head and neck,Xerostomia,Frequent
+HP:0000670,Head and neck,Carious teeth,Frequent
+HP:0001635,Cardiovascular,Congestive heart failure,Occasional
+HP:0100735,Cardiovascular,Hypertensive crisis,Occasional
+HP:0002092,Respiratory System,Pulmonary arterial hypertension,Occasional
+HP:0002094,Respiratory System,Dyspnea,Very frequent
+HP:0002113,Respiratory System,Pulmonary infiltrates,Very frequent
+HP:0002206,Respiratory System,Pulmonary fibrosis,Frequent
+HP:0002015,Digestive System,Dysphagia,Frequent
+HP:0002017,Digestive System,Nausea and vomiting,Occasional
+HP:0002020,Digestive System,Gastroesophageal reflux,Very frequent
+HP:0002024,Digestive System,Malabsorption,Frequent
+HP:0030142,Digestive System,Abnormal bowel sounds,Occasional
+HP:0000083,Genitourinary system,Renal insufficiency,Occasional
+HP:0030016,Genitourinary system,Dyspareunia,Frequent
+HP:0100520,Genitourinary system,Oliguria,Very frequent
+HP:0002960,Immunology,Autoimmunity,Very frequent
+HP:0001369,Skeletal system,Arthritis,Frequent
+HP:0002797,Skeletal system,Osteolysis,Frequent
+HP:0100958,Skeletal system,Narrow foramen obturatorium,Very frequent
+HP:0001324,Musculature,Muscle weakness,Frequent
+HP:0001371,Musculature,Flexion contracture,Frequent
+HP:0000951,"Skin, Hair, and Nails",Abnormality of the skin,Very frequent
+HP:0100585,"Skin, Hair, and Nails",Telangiectasia of the skin,Frequent
+HP:0200042,"Skin, Hair, and Nails",Skin ulcer,Frequent
+HP:0002829,Constitutional Symptom,Arthralgia,Frequent

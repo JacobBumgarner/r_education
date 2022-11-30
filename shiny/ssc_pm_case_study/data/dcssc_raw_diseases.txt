@@ -1,0 +1,46 @@
+Head and neck [ 2 annotations ]
+Term Identifier Term Name
+HP:0000217 Xerostomia
+HP:0000670 Carious teeth
+Cardiovascular [ 2 annotations ]
+Term Identifier Term Name
+HP:0001635 Congestive heart failure
+HP:0100735 Hypertensive crisis
+Respiratory System [ 4 annotations ]
+Term Identifier Term Name
+HP:0002092 Pulmonary arterial hypertension
+HP:0002094 Dyspnea
+HP:0002113 Pulmonary infiltrates
+HP:0002206 Pulmonary fibrosis
+Digestive System [ 5 annotations ]
+Term Identifier Term Name
+HP:0002015 Dysphagia
+HP:0002017 Nausea and vomiting
+HP:0002020 Gastroesophageal reflux
+HP:0002024 Malabsorption
+HP:0030142 Abnormal bowel sounds
+Genitourinary system [ 3 annotations ]
+Term Identifier Term Name
+HP:0000083 Renal insufficiency
+HP:0030016 Dyspareunia
+HP:0100520 Oliguria
+Immunology [ 1 annotation ]
+Term Identifier Term Name
+HP:0002960 Autoimmunity
+Skeletal system [ 3 annotations ]
+Term Identifier Term Name
+HP:0001369 Arthritis
+HP:0002797 Osteolysis
+HP:0100958 Narrow foramen obturatorium
+Musculature [ 2 annotations ]
+Term Identifier Term Name
+HP:0001324 Muscle weakness
+HP:0001371 Flexion contracture
+Skin, Hair, and Nails [ 3 annotations ]
+Term Identifier Term Name
+HP:0000951 Abnormality of the skin
+HP:0100585 Telangiectasia of the skin
+HP:0200042 Skin ulcer
+Constitutional Symptom [ 1 annotation ]
+Term Identifier Term Name
+HP:0002829 Arthralgia
