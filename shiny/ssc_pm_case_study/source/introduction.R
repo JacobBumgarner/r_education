@@ -8,25 +8,23 @@ title <- fluidRow(box(
     title = tags$h2(
         HTML(
             "Case Report:<br>
-            Diffuse Cutaneous Systemic Sclerosis and Polymyositis"
-        ),
-        align = "center"
-        ),
+            Diffuse Cutaneous Systemic Sclerosis & Polymyositis"
+    )),
     width = 12,
-    height = "50%",
     tags$h4(
-    HTML(
-        "
-    Diffuse Cutaneous Systemic Sclerosis and Polymyositis are two
-    rare autoimmune diseases.
-    <br>
-    This case report examines the epidemiology and EU treatment network center
-    locations for each disease.
-        "
-    ),
-    align = "center"
-)
-))
+        HTML(
+            "
+    For a recent project in my graduate studies, I examined several
+    rare autoimmune diseases with limited medical treatment options.
+    <br><br>
+    This site examines the etiology, epidemiology, and other features for
+    two of those diseases:
+    <b>Diffuse cutaneous systemic sclerosis</b> and <b>polymyositis</b>.
+    Both of these diseases are debilitating and are
+    associated with high rates of mortality.
+    "
+    ))
+), align = "center")
 
 dcssc_box <- box(
     title = "Diffuse Cutaneous Systemic Sclerosis",
@@ -40,7 +38,7 @@ dcssc_box <- box(
         tags$h4(HTML("<b>Overview</b>")),
         HTML(
             "
-            Diffuse cutaneous systemic sclerosis (dcSSc) is a form 
+            Diffuse cutaneous systemic sclerosis (dcSSc) is a form
             systemic sclerosis, a rare autoimmune disease.
             <br>
             Patients with dcSSc often present with Raynaud's Phenomenon
@@ -55,7 +53,7 @@ dcssc_box <- box(
             palliative treatments exist.
             <br>
             The 5-year survival rate for dcSSc is 85.5%, and the 10-year
-            survival rate is 69.7% 
+            survival rate is 69.7%
             <a target='_blank' href='https://arthritis-research.biomedcentral.com/articles/10.1186/s13075-021-02672-y'>[1]</a>.
             "
         ),
@@ -69,7 +67,7 @@ dcssc_box <- box(
             <br>
             The exact physiological mechanisms of dcSSc are not
             well-characterized, but SSc is characterized by excessive
-            infiltration of CD4+ & CD4+CD8+ T cells and monocytes into 
+            infiltration of CD4+ & CD4+CD8+ T cells and monocytes into
             the target tissue. The CD28/CD80-86 activational
             pathway is excessively active in this disease family
             <a target='_blank' href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4459100/'>[3]</a>.
@@ -90,34 +88,34 @@ pm_box <- box(
         tags$h4(HTML("<b>Overview</b>")),
         HTML(
             "
-            Polymyositis (PM) is a type of rare muscle diseases known 
+            Polymyositis (PM) is a type of rare muscle diseases known
             as inflammatory myopathies.
             <br>
-            PM is an inflammatory disease that causes skeletal muscle 
+            PM is an inflammatory disease that causes skeletal muscle
             weakness (myopathy).
             <br>
             "
         ),
         tags$h4(HTML("<b>Treatment & Prognosis</b>")),
         HTML(
-            "There is currently no known treatment for PM, but 
+            "There is currently no known treatment for PM, but
             palliative treatments exist.<br>
-            The 5-year survival rate of PM is 75%, and the 10-year 
+            The 5-year survival rate of PM is 75%, and the 10-year
             survival rate is 55%
             <a target='_blank' href='https://pubmed.ncbi.nlm.nih.gov/16477398/'>[4]</a>.
             "
         ),
         tags$h4(HTML("<b>Pathophysiology</b>")),
         HTML(
-            "PM is characterized by excessive muscular inflammation 
-            caused by infiltrating CD4+ and CD8+ T cells, macrophages, 
+            "PM is characterized by excessive muscular inflammation
+            caused by infiltrating CD4+ and CD8+ T cells, macrophages,
             and dendritic cells into skeletal muscular tissue
             <a target='_blank' href='https://www.ncbi.nlm.nih.gov/books/NBK532860/#:~:text=The%20estimated%20prevalence%20of%20polymyositis,increase%20in%20the%20detection%20rate.'>[5]</a>.
 
             <br>
 
-            The microvasculature of PM eventually thickens at the 
-            capillary and venule level, leading to increased 
+            The microvasculature of PM eventually thickens at the
+            capillary and venule level, leading to increased
             inflammatory cell infiltration
             <a target='_blank' href='https://www.ncbi.nlm.nih.gov/books/NBK532860/#:~:text=The%20estimated%20prevalence%20of%20polymyositis,increase%20in%20the%20detection%20rate.'>[5]</a>.
             "

@@ -8,8 +8,7 @@ library(leaflet)
 
 # Get the country data
 df <- read.csv("data/expert_center_locations.csv")
-
-countries <- select(df, , "country", "disease")
+countries <- select(df, "country", "disease")
 countries <- as.data.frame(table(countries))
 country_counts <- data.frame(
     country = unique(countries$country),
@@ -38,23 +37,26 @@ pm_centers <- select(
 ## Page layout
 # Title
 title <- fluidRow(box(
-    title = tags$h2("dcSSc & PM EU Expert Treatment Centers", align = "center"),
+    title = tags$h2(
+        "EU Expert Treatment Network Centers",
+        align = "center"
+    ),
     width = 12,
     height = "50%",
     tags$h4(
-    HTML(
-        "
+        HTML(
+            "
         Below I've visualized the location of expert treatment centers for both
-        dcSSc. These centers were identified using 
-        <a target='_blank' href='https://www.orpha.net/consor/cgi-bin/index.php?lng=EN'>orpha.net</a>, 
+        dcSSc. These centers were identified using
+        <a target='_blank' href='https://www.orpha.net/consor/cgi-bin/index.php?lng=EN'>orpha.net</a>,
         and the expert center locations were extracted
-        using the Google Maps Python API 
+        using the Google Maps Python API
         <a target='_blank' href='https://github.com/JacobBumgarner/r_education/blob/main/shiny/ssc_pm_case_study/location_scraper.ipynb'>(see my code here)</a>
         .
         "
-    ),
-    align = "center"
-)
+        ),
+        align = "center"
+    )
 ))
 
 # Map

@@ -24,7 +24,10 @@ labels <- c("Women", "Men")
 ## Layout
 # Title & text
 title <- fluidRow(box(
-    title = tags$h2("dcSSc & PM Epidemiology", align = "center"),
+    title = tags$h2(
+        "Disease Epidemiology",
+        align = "center"
+    ),
     width = 12,
     height = "50%",
     tags$h4(
