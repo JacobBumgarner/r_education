@@ -6,6 +6,7 @@ library(colourpicker)
 library(dplyr)
 library(leaflet)
 
+
 # Get the country data
 df <- read.csv("data/expert_center_locations.csv")
 countries <- select(df, "country", "disease")
@@ -34,6 +35,7 @@ pm_centers <- select(
     df[df["disease"] == "PM", ], "center"
 )
 
+
 ## Page layout
 # Title
 title <- fluidRow(box(
@@ -58,6 +60,7 @@ title <- fluidRow(box(
         align = "center"
     )
 ))
+
 
 # Map
 generate_map <- function(checked_diseases, dcssc_color, pm_color, mapparams) {
@@ -101,6 +104,7 @@ generate_map <- function(checked_diseases, dcssc_color, pm_color, mapparams) {
     }
     map
 }
+
 
 # Bar Graph by Country
 plot_single_disease <- function(disease, data, color) {
@@ -176,6 +180,7 @@ bar_plot_box <- box(
 )
 
 
+# Tabs
 # Options
 disease_checkbox <- checkboxGroupInput(
     "diseases",
@@ -187,32 +192,39 @@ disease_checkbox <- checkboxGroupInput(
     selected = c("dcSSc", "PM")
 )
 
-pm_color_box <- colourInput(
-    "pm_color", "Select PM Color",
-    value = "#ADEFD1"
-)
 dcssc_color_box <- colourInput(
     "dcssc_color", "Select dcSSc Color",
     value = "#246DB5"
 )
 
-options_box <- box(
-    title = "Visualization Options",
-    status = "black",
-    icon = icon("gear"),
-    width = 12,
-    align = "left",
-    disease_checkbox,
-    dcssc_color_box,
-    pm_color_box
+pm_color_box <- colourInput(
+    "pm_color", "Select PM Color",
+    value = "#ADEFD1"
+)
+
+expert_networks_options <- fluidRow(
+    column(12, offset = 0,
+        box(
+            title = "Graph Options",
+            icon = icon("chart-simple"),
+            status = "black",
+            headerBorder = FALSE,
+            solidHeader = TRUE,
+            collapsible = TRUE,
+            width = 12,
+            background = "gray",
+            disease_checkbox,
+            dcssc_color_box,
+            pm_color_box
+        )
+    ),
 )
 
 
-# Tab
 expert_networks_tab <- tabItem(
     tabName = "expert_networks",
     title,
     fluidRow(leafletOutput("map", width = "90%"), align = "center"),
     p(),
-    fluidRow(column(7, bar_plot_box, offset = 1), column(3, options_box), align = "center"),
+    fluidRow(column(8, bar_plot_box, offset = 2), align = "center"),
 )

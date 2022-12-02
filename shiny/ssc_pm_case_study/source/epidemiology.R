@@ -5,6 +5,7 @@ library(shinydashboardPlus)
 library(plotly)
 library(colourpicker)
 
+
 # First load the epidemiology data
 epidemiology_data <- read.csv("data/epidemiologies.csv")
 
@@ -35,16 +36,17 @@ title <- fluidRow(box(
         "
         Both of these diseases are extremely rare.
         Importantly, there is a stark sex difference in the prevalence
-        of each disease, with females developing both dcSSc
+        of each disease. Women develop both dcSSc
         <a target='_blank' href='https://pubmed.ncbi.nlm.nih.gov/34782448/'>[1]</a>
         and PM
         <a target='_blank' href='https://www.ncbi.nlm.nih.gov/books/NBK532860/#:~:text=The%20estimated%20prevalence%20of%20polymyositis,increase%20in%20the%20detection%20rate.'>[2]</a>
-        more frequently than males.
+        far more frequently than men.
         "
     ),
     align = "center"
 )
 ))
+
 
 # Plot generation
 generate_bar_plot <- function(data, colors) {
@@ -106,6 +108,7 @@ generate_epidemiology_plot <- function(graph_type, dataset, women_color, men_col
     graph
 }
 
+
 # dcSSc Epidemiology
 dcssc_prevalence_text <- infoBox(
     "Population Prevalence",
@@ -125,6 +128,7 @@ dcssc_box <- box(
     dcssc_prevalence_text,
     box(plotlyOutput("dcssc_graph"), width = 12)
 )
+
 
 # PM Epidemiology
 PM_prevalence_text <- infoBox(
@@ -146,39 +150,47 @@ pm_box <- box(
     box(plotlyOutput("pm_graph"), width = 12)
 )
 
-# Graphing options
-graph_type_selection <- selectInput(
-    "graph_type", "Select Graph Type:", c("Bar Plot", "Pie Chart"),
-    width = 150
-)
-
-female_color_picker <- colourInput("women_color", "Select Women Color:", "#c90076")
-male_color_picker <- colourInput("men_color", "Select Men Color:", "#2986cc", )
-
-options_box <- box(
-    title = "Graph Options",
-    width = 12,
-    status = "black",
-    solidHeader = FALSE,
-    icon = icon("gear"),
-    align = "center",
-    graph_type_selection,
-    female_color_picker,
-    male_color_picker
-)
 
 # References
 references <- box(
     title = "References",
     icon = icon("book"),
     status = "black",
-    width = 12,
     align = "left",
+    width = 12,
     tags$ol(
         tags$li("De Angelis, R., Giuggioli, D., Bajocchi, G., Dagna, L., Zanframundo, G., Foti, R., Cacciapaglia, F., Cuomo, G., Ariani, A. & Rosato, E. (2022) Sex-related differences in systemic sclerosis: a multicenter cross-sectional study from the National Registry of the Italian Society for Rheumatology. The Journal of Rheumatology. 49, 176-185."),
         tags$li("Mammen, A.L. (2016) Autoimmune myopathies. CONTINUUM: Lifelong Learning in Neurology. 22, 1852."),
         tags$li("Wibianto, A. & Santoso, I.D. (2020) Diffuse Cutaneous Systemic Scleroderma with Secondary In-fection: A Case Report. J Dermatol Res Ther. 6, 091.")
     )
+)
+
+
+# Tabs
+# Graphing options
+graph_type_selection <- selectInput(
+    "graph_type", "Select Graph Type:", c("Bar Plot", "Pie Chart"),
+    width = 150
+)
+female_color_picker <- colourInput("women_color", "Select Women Color:", "#c90076")
+male_color_picker <- colourInput("men_color", "Select Men Color:", "#2986cc")
+
+epidemiology_options <- fluidRow(
+    column(12, offset = 0,
+        box(
+            title = "Graph Options",
+            icon = icon("chart-simple"),
+            status = "black",
+            headerBorder = TRUE,
+            solidHeader = TRUE,
+            collapsible = TRUE,
+            width = 12,
+            background = "gray",
+            graph_type_selection,
+            female_color_picker,
+            male_color_picker
+        )
+    ),
 )
 
 epidemiology_tab <- tabItem(
@@ -188,7 +200,6 @@ epidemiology_tab <- tabItem(
         dcssc_box, pm_box
     ),
     fluidRow(
-        column(3, options_box, offset = 1),
-        column(7, references),
+        column(12, references)
     ),
 )

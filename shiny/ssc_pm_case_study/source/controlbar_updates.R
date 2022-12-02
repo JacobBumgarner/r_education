@@ -28,21 +28,3 @@ toggle_controlbar <- function(input) {
         check_controlbar_toggle(input$controlbar)
     }
 }
-
-
-# Main body
-# Control Panel
-dashboardControlbar(
-    id = "controlbar",
-    br(),
-    conditionalPanel(
-        condition = "input.sidebar == 'epidemiology'",
-        epidemiology_options
-    ),
-    conditionalPanel(
-        condition = "input.sidebar == 'expert_networks'",
-        expert_networks_options
-    ),
-    overlay = FALSE,
-    collapsed = FALSE
-)
