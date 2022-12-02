@@ -181,7 +181,7 @@ epidemiology_options <- fluidRow(
             title = "Graph Options",
             icon = icon("chart-simple"),
             status = "black",
-            headerBorder = TRUE,
+            headerBorder = FALSE,
             solidHeader = TRUE,
             collapsible = TRUE,
             width = 12,
