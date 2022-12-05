@@ -165,7 +165,6 @@ generate_country_bar_plot <- function(diseases, dcssc_color, pm_color) {
 
     # Plot boiler plate
     plot <- plot %>% layout(
-        title = paste0("<b>", disease_title, "EU Expert Treatment Networks"),
         yaxis = list(dtick = 1),
         showlegend = TRUE
     )
@@ -176,6 +175,7 @@ generate_country_bar_plot <- function(diseases, dcssc_color, pm_color) {
 bar_plot_box <- box(
     width = 12,
     status = "black",
+    title = "EU Expert Treatment Networks by Country",
     plotlyOutput("country_plot")
 )
 

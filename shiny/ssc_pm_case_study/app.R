@@ -1,13 +1,14 @@
 library(shiny)
 library(shinyjs)
 
+library(DT)
 library(plotly)
 library(leaflet)
 
 source("source/introduction.R")
 source("source/epidemiology.R")
 source("source/eu_centers.R")
-source("source/controlbar_updates.R")
+source("source/symptoms.R")
 
 # UI
 sidebar_width <- 275
@@ -30,6 +31,14 @@ ui <- dashboardPage(
             menuItem(
                 "Introduction",
                 tabName = "introduction", icon = icon("home")
+            ),
+            menuItem(
+                "Disease Symptoms",
+                tabName = "symptoms", icon = icon("head-side-virus")
+            ),
+            conditionalPanel(
+                condition = "input.sidebar == 'symptoms'",
+                symptoms_options,
             ),
             menuItem(
                 "Epidemiology",
@@ -56,9 +65,10 @@ ui <- dashboardPage(
         tabItems(
             introduction_tab,
             epidemiology_tab,
+            symptoms_tab,
             expert_networks_tab
         ),
-        tags$script(HTML("$('body').addClass('fixed');"))  # Fix the nav/bars
+        tags$script(HTML("$('body').addClass('fixed');")) # Fix the nav/bars
     )
 )
 
@@ -76,7 +86,33 @@ server <- function(input, output, session) {
         )
     )
 
-    # Expert Center Page Reactivity
+    ## Symptom Page Reactivity
+    # Frequency Heatmap
+    output$symptom_frequency_heatmap <- renderPlotly({
+        render_symptom_frequency_heatmap(input$frequency_heatmap_cmap)
+    })
+
+    output$system_frequency_heatmap <- renderPlotly({
+        render_system_frequency_heatmap(input$frequency_heatmap_cmap)
+    })
+
+    output$symptom_frequency_bar <- renderPlotly({
+        render_symptom_frequency_bar_plot(
+            input$diseases_symptoms,
+            input$dcssc_freq_color,
+            input$pm_freq_color
+        )
+    })
+
+    output$system_frequency_pie <- renderPlotly({
+        render_system_pie_plot(input$system_pie_colormap)
+    })
+
+    # Tables
+    output$dcssc_symptoms_table <- renderDataTable({dcssc_server_table})
+    output$pm_symptoms_table <- renderDataTable({pm_server_table})
+
+    ## Expert Center Page Reactivity
     # Map
     output$map <- renderLeaflet({
         isolate({
@@ -103,7 +139,7 @@ server <- function(input, output, session) {
             input$diseases,
             input$dcssc_color,
             input$pm_color
-        )
+        ) %>% config(displaylogo = FALSE)
     )
 }
 
