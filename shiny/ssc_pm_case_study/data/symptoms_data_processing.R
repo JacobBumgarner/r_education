@@ -2,8 +2,8 @@ library(dplyr)
 
 ## Extract the data for the page
 # Frequencies
-dcssc_data <- read.csv("/Users/jacobbumgarner/Desktop/r_education/shiny/ssc_pm_case_study/data/dcssc_symptoms.csv")
-pm_data <- read.csv("/Users/jacobbumgarner/Desktop/r_education/shiny/ssc_pm_case_study/data/pm_symptoms.csv")
+dcssc_data <- read.csv("data/dcssc_symptoms.csv")
+pm_data <- read.csv("data/pm_symptoms.csv")
 
 get_symptom_frequencies <- function(data) {
     frequencies <- as.data.frame(select(data, "Symptom", "Frequency"))

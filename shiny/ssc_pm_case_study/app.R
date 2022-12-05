@@ -27,6 +27,7 @@ ui <- dashboardPage(
     # Sidebar
     dashboardSidebar(
         width = sidebar_width,
+        collapsed = TRUE, 
         sidebarMenu(
             id = "sidebar",
             menuItem(
