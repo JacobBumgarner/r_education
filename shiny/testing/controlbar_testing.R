@@ -24,7 +24,7 @@ ui <- dashboardPage(
         )
     ),
     body = dashboardBody(
-        box(width=12, status="danger"),
+        box(width = 12, status = "danger"),
         useShinyjs()
     ),
     controlbar = dashboardControlbar(
@@ -54,8 +54,8 @@ ui <- dashboardPage(
 
 check_controlbar_toggle <- function(bar_status) {
     if (bar_status == TRUE) {
-            # addClass(selector = "body", class = "control-sidebar-open")
-            addClass(selector = "body > div.wrapper > aside#controlbar", class = "control-sidebar-open")
+        # addClass(selector = "body", class = "control-sidebar-open")
+        addClass(selector = "body > div.wrapper > aside#controlbar", class = "control-sidebar-open")
     }
 }
 
@@ -64,14 +64,12 @@ server <- function(input, output, session) {
         if (input$sidebar %in% c("2")) {
             # removeClass(selector = "body", class = "control-sidebar-open")
             removeClass(selector = "body > div.wrapper > aside#controlbar", class = "control-sidebar-open")
-            # addClass(selector = "body", class = "data-overlay")
             hide(selector = "body > div.wrapper > header > nav > div:nth-child(4) > ul")
         } else {
-            show(selector = "body > div.wrapper > header > nav > div:nth-child(4) > ul")
+            shinyjs::show(selector = "body > div.wrapper > header > nav > div:nth-child(4) > ul")
             check_controlbar_toggle(input$controlbar)
         }
     })
-
 }
 
 shinyApp(ui, server)
