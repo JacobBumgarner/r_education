@@ -9,6 +9,7 @@ source("source/introduction.R")
 source("source/epidemiology.R")
 source("source/eu_centers.R")
 source("source/symptoms.R")
+source("source/controlbar_updates.R")
 
 # UI
 sidebar_width <- 275
@@ -18,7 +19,7 @@ ui <- dashboardPage(
 
     # Header
     dashboardHeader(
-        title = "Case Report: dcSSc & PM",
+        title = icon("suitcase-medical"),
         titleWidth = sidebar_width,
         controlbarIcon = div(icon("gears"), "Graph Options")
     ),
@@ -36,25 +37,13 @@ ui <- dashboardPage(
                 "Disease Symptoms",
                 tabName = "symptoms", icon = icon("head-side-virus")
             ),
-            conditionalPanel(
-                condition = "input.sidebar == 'symptoms'",
-                symptoms_options,
-            ),
             menuItem(
                 "Epidemiology",
                 tabName = "epidemiology", icon = icon("chart-simple")
             ),
-            conditionalPanel(
-                condition = "input.sidebar == 'epidemiology'",
-                epidemiology_options
-            ),
             menuItem(
                 "EU Expert Networks",
                 tabName = "expert_networks", icon = icon("location-dot")
-            ),
-            conditionalPanel(
-                condition = "input.sidebar == 'expert_networks'",
-                expert_networks_options
             )
         )
     ),
@@ -69,11 +58,35 @@ ui <- dashboardPage(
             expert_networks_tab
         ),
         tags$script(HTML("$('body').addClass('fixed');")) # Fix the nav/bars
+    ),
+
+    # Controlbar
+    dashboardControlbar(
+        id = "controlbar",
+        conditionalPanel(
+            condition = "input.sidebar == 'symptoms'",
+            symptoms_options,
+        ),
+        conditionalPanel(
+            condition = "input.sidebar == 'epidemiology'",
+            epidemiology_options
+        ),
+        conditionalPanel(
+            condition = "input.sidebar == 'expert_networks'",
+            expert_networks_options
+        ),
+        overlay = TRUE,
+        collapsed = FALSE
     )
 )
 
 # Server
 server <- function(input, output, session) {
+    ## Controlbar updates
+    observeEvent(input$sidebar, {
+        toggle_controlbar(input)
+    })
+
     ## Epidemiology Page Reactivity
     output$pm_graph <- renderPlotly(
         generate_epidemiology_plot(
