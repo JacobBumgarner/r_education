@@ -77,7 +77,7 @@ ui <- dashboardPage(
             expert_networks_options
         ),
         overlay = TRUE,
-        collapsed = FALSE
+        collapsed = TRUE
     )
 )
 

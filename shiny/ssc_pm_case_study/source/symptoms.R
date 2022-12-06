@@ -264,7 +264,19 @@ dcssc_table <- box(
 dcssc_server_table <- datatable(
     dcssc_data,
     selection = "none",
-    options = list(pageLength = 5)
+    extensions = "Buttons",
+    options = list(
+        "dom" = "lBfrtip",
+        buttons = list(
+            "copy",
+            list(
+                extend = "collection",
+                buttons = c("csv", "excel", "pdf"),
+                text = "Download"
+            )
+        ),
+        lengthMenu = list(c(5, 10, 20), c(5, 10, 20))
+    )
 )
 
 pm_table <- box(
@@ -278,7 +290,19 @@ pm_table <- box(
 pm_server_table <- datatable(
     pm_data,
     selection = "none",
-    options = list(pageLength = 5)
+    extensions = "Buttons",
+    options = list(
+        "dom" = "lBfrtip",
+        buttons = list(
+            "copy",
+            list(
+                extend = "collection",
+                buttons = c("csv", "excel", "pdf"),
+                text = "Download"
+            )
+        ),
+        lengthMenu = list(c(5, 10, 20), c(5, 10, 20))
+    )
 )
 
 
@@ -346,16 +370,16 @@ symptoms_tab <- tabItem(
     fluidRow(
         column(
             6,
-            dcssc_table,
             symptom_frequency_heatmap_box,
             symptom_frequency_bar_box,
+            dcssc_table,
             style = "padding: 0px;"
         ),
         column(
             6,
-            pm_table,
             system_frequency_heatmap_box,
             system_frequency_pie_plot,
+            pm_table,
             style = "padding: 0px;"
         )
     )
