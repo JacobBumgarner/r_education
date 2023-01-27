@@ -1,6 +1,7 @@
 # VSCode
 *.code-workspace
 .vscode/
+.python-version
 
 # Personal
 .DS_Store
