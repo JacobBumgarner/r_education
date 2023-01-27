@@ -58,6 +58,7 @@ ui <- dashboardPage(
             symptoms_tab,
             expert_networks_tab
         ),
+        graph_options_hint,
         tags$script(HTML("$('body').addClass('fixed');")) # Fix the nav/bars
     ),
 

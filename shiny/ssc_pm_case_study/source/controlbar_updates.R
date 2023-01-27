@@ -1,30 +1,35 @@
+
 library(shiny)
-library(shinyjs)
+library(shinyBS)
+shinyApp(
+ ui =
+   fluidPage(
+     sidebarLayout(
+       sidebarPanel(textInput("num1", NULL, value = 100),
+         "divided by", textInput("num2", NULL, value = 20),
+         "equals", textOutput("exampleOutput")),
+       mainPanel(
+         bsAlert("alert")
+       )
+     )
+ ),
+ server =
+   function(input, output, session) {
+     output$exampleOutput <- renderText({
+       num1 <- as.numeric(input$num1)
+       num2 <- as.numeric(input$num2)
 
-# Check whether to show the controlbar or not when it is enabled
-check_controlbar_toggle <- function(bar_status) {
-    if (bar_status == TRUE) {
-        addClass(selector = "body > div.wrapper > aside#controlbar", class = "control-sidebar-open")
-        # addClass(selector = "body", class = "control-sidebar-open")
-    }
-}
+       if(is.na(num1) | is.na(num2)) {
+         createAlert(session, "alert", "exampleAlert", title = "Oops",
+           content = "Both inputs should be numeric.", append = FALSE)
+       } else if(num2 == 0) {
+         createAlert(session, "alert", "exampleAlert", title = "Oops",
+           content = "You cannot divide by 0.", append = FALSE)
+       } else {
+         closeAlert(session, "exampleAlert")
+         return(num1/num2)
+       }
 
-# Hide the controlbar based on specific tab selections
-toggle_controlbar <- function(input) {
-    if (input$sidebar %in% c("introduction")) {
-        removeClass(selector = "body > div.wrapper > aside#controlbar", class = "control-sidebar-open")
-        # removeClass(selector = "body", class = "control-sidebar-open")
-        hide(
-            selector = "
-            body > div.wrapper > header > nav > div:nth-child(4) > ul
-            "
-        )
-    } else {
-        shinyjs::show(
-            selector = "
-            body > div.wrapper > header > nav > div:nth-child(4) > ul
-            "
-        )
-        check_controlbar_toggle(input$controlbar)
-    }
-}
+     })
+   }
+)
