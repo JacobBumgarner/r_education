@@ -43,4 +43,5 @@ for (study_id in study_ids) {
 
     metadata[nrow(metadata) + 1, ] <- data
 }
-metadata$summary
+
+arrow::write_parquet(metadata, "study_summaries.parquet")
