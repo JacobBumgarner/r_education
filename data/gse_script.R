@@ -22,6 +22,7 @@ metadata <- data.frame(
     study_id = character(),
     title = character(),
     summary = character(),
+    publish_date = character(),
     link = character()
 )
 
@@ -38,6 +39,7 @@ for (study_id in study_ids) {
         study_id,
         result$title,
         result$summary,
+        result$pdat,
         paste0(link_basename, study_id)
     )
 
