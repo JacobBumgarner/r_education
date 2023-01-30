@@ -22,7 +22,7 @@ metadata <- data.frame(
     study_id = character(),
     title = character(),
     summary = character(),
-    publish_date = character(),
+    publication_date = character(),
     link = character()
 )
 
@@ -46,4 +46,4 @@ for (study_id in study_ids) {
     metadata[nrow(metadata) + 1, ] <- data
 }
 
-arrow::write_parquet(metadata, "study_summaries.parquet")
+arrow::write_parquet(metadata, "data/study_summaries.parquet")
