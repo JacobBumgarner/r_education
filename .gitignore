@@ -9,3 +9,5 @@ __pycache__/
 
 # API
 config/
+
+.pytest_cache
